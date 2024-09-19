@@ -1,20 +1,25 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "target": "ES2020",
     "module": "ES2020",
     "moduleResolution": "node",
     "strict": true,
-    "jsx": "preserve",
+    "jsx": "preserve", // 或者保持 "preserve" 如果你不使用 JSX
     "sourceMap": true,
+    "types": ["eslint"],
+    "typeRoots": ["./node_modules/@types", "./.pnpm/@types"],
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     },
-    "lib": ["es2020", "dom"],
-    "skipLibCheck": true
+    "lib": ["ES2020", "DOM"],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true // 如果你生成声明文件
   },
-  "include": ["src/**/*", "src/**/*.vue"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules", "build", "dist"] // 排除构建目录
 }

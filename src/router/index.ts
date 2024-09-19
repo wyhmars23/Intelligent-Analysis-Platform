@@ -13,12 +13,44 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: 'login',
+      redirect: 'Data-Analysis',
     },
     {
-      path: '/login',
-      name: 'login',
-      component: () => import('@/views/login/index.vue'),
+      path: '/Data-Search',
+      name: 'Data-Search',
+      component: () => import('@/views/Data-Search/index.vue'),
+      meta: {
+        requiresAuth: false,
+      },
+    },
+    {
+      path: '/entrance',
+      name: 'entrance',
+      component: () => import('@/views/entrance/index.vue'),
+      meta: {
+        requiresAuth: false,
+      },
+    },
+    {
+      path: '/Data-history',
+      name: 'Data-history',
+      component: () => import('@/views/Data-history/index.vue'),
+      meta: {
+        requiresAuth: false,
+      },
+    },
+    {
+      path: '/Data-Analysis',
+      name: 'Data-Analysis',
+      component: () => import('@/views/Data-Analysis/index.vue'),
+      meta: {
+        requiresAuth: false,
+      },
+    },
+    {
+      path: '/Data-storage',
+      name: 'Data-storage',
+      component: () => import('@/views/Data-storage/index.vue'),
       meta: {
         requiresAuth: false,
       },
