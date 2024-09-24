@@ -13,7 +13,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: 'login',
+      redirect: 'login-last',
     },
     {
       path: '/Data-Search',
@@ -56,9 +56,9 @@ const router = createRouter({
       },
     },
     {
-      path: '/login',
-      name: 'login',
-      component: () => import('@/views/login/index.vue'),
+      path: '/login-last',
+      name: 'login-last',
+      component: () => import('@/views/login-last/index.vue'),
       meta: {
         requiresAuth: false,
       },
